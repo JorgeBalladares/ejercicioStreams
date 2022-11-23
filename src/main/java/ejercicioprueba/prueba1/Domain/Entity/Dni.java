@@ -3,9 +3,9 @@ package ejercicioprueba.prueba1.Domain.Entity;
 public class Dni {
 	
 	private int numero;
-	private int localidad;
+	private String localidad;
 	
-	public Dni(int numero, int localidad) {
+	public Dni(int numero, String localidad) {
 		super();
 		this.numero = numero;
 		this.localidad = localidad;
@@ -19,11 +19,11 @@ public class Dni {
 		this.numero = numero;
 	}
 
-	public int getLocalidad() {
+	public String getLocalidad() {
 		return localidad;
 	}
 
-	public void setLocalidad(int localidad) {
+	public void setLocalidad(String localidad) {
 		this.localidad = localidad;
 	}
 

@@ -1,24 +1,33 @@
 package ejercicioprueba.prueba1.Domain.Entity;
 
-import java.time.LocalDate;
+import java.util.List;
 
 public class Comprador {
 	
 	private String nombre;
 	private String apellido;
-	private LocalDate date;
 	private Dni dni;
+	private List<Producto> productos;
 	
 	public Comprador() {
 		super();
 	}
 
-	public Comprador(String nombre, String apellido, LocalDate date, Dni dni) {
+	public Comprador(String nombre, String apellido, Dni dni) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.date = date;
 		this.dni = dni;
+	}
+	
+	
+
+	public Comprador(String nombre, String apellido, Dni dni, List<Producto> productos) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.productos = productos;
 	}
 
 	public String getNombre() {
@@ -37,14 +46,6 @@ public class Comprador {
 		this.apellido = apellido;
 	}
 
-	public LocalDate getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-
 	public Dni getDni() {
 		return dni;
 	}
@@ -52,11 +53,23 @@ public class Comprador {
 	public void setDni(Dni dni) {
 		this.dni = dni;
 	}
+	
+	
+
+	public List<Producto> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
+	}
 
 	@Override
 	public String toString() {
-		return "Comprador [nombre=" + nombre + ", apellido=" + apellido + ", date=" + date + ", dni=" + dni + "]";
+		return "Comprador [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + "]";
 	}
+
+	
 	
 	
 	
